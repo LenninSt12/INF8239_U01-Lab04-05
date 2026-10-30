@@ -1,0 +1,9 @@
+Criterio,Candidato_A_Metacritic,Candidato_B_Netflix
+Enlace_Original,https://www.kaggle.com/datasets/kashifsahil/16000-movies-1910-2024-metacritic,https://www.kaggle.com/datasets/shivamb/netflix-shows
+Pertinencia,Sí. La descripción permite predecir los géneros cinematográficos.,Sí. Las sinopsis permiten clasificar la categoría.
+Licencia,Sí. Licencia abierta de Kaggle que permite análisis y publicación.,Sí. Dominio público (CC0).
+Representatividad,Amplia (cine histórico 1910-2024). Sesgo hacia películas en inglés.,Muy limitada. Solo cubre el catálogo exclusivo de Netflix hasta 2021.
+Calidad,Alta. Sin nulos críticos en texto/objetivo y validada en auditoría.,Regular. Clases extremadamente pequeñas y etiquetas muy ambiguas (ej. "International TV").
+Reproducibilidad,Sí. Descarga programática garantizada mediante kagglehub.,Sí. Descarga programática disponible en Kaggle.
+Riesgo,Bajo. Contiene información pública de entretenimiento sin datos sensibles.,Bajo. Catálogo público de la plataforma de streaming.
+Decision_Final,ACEPTADO,RECHAZADO
