@@ -40,3 +40,5 @@
 * **Sesgos previsibles:** Existe un sesgo geográfico, cultural y lingüístico significativo. El corpus está dominado por cine occidental (especialmente Hollywood) y las sinopsis están exclusivamente en idioma inglés. Las calificaciones (`Rating`) reflejan el sesgo demográfico de la base de usuarios de Metacritic.
 * **Población no cubierta:** Producciones independientes fuera del circuito de distribución occidental, cortometrajes, películas en idiomas distintos al inglés (sin traducción oficial), y contenido exclusivo de plataformas cerradas de streaming locales.
 * **Usos prohibidos:** Este dataset no debe utilizarse para predecir el éxito financiero (taquilla) de una obra, ya que carece de variables económicas. Tampoco debe usarse para sistemas de recomendación comercial automatizados sin aplicar antes una corrección por el sesgo de popularidad (películas antiguas o menos votadas están subrepresentadas).
+## Reproducción del Proyecto
+Para reproducir este proyecto, descarga el dataset "16000-movies-1910-2024-metacritic" de Kaggle, colócalo en la ruta local `data/raw/16k_Movies.csv` y define la variable `DATASET_PATH` en tu archivo `.env`.
