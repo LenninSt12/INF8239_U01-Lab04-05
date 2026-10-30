@@ -1,0 +1,4 @@
+Model,F1_Macro
+Baseline_Dummy,0.023361509958314035
+Complement_NB,0.22222527045061355
+Logistic_Regression,0.21054483925058556
