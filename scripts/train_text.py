@@ -22,7 +22,11 @@ target_col = os.getenv("TARGET_COLUMN", "Genres")
 print("Cargando dataset...")
 df = pd.read_csv(dataset_path)
 
+# CORRECCIÓN 1: Eliminar nulos y purgar sinopsis duplicadas (fuga de datos)
 df = df.dropna(subset=[text_col, target_col]).copy()
+df = df.drop_duplicates(subset=[text_col]).copy()
+
+# Construcción de la variable objetivo
 df['Primary_Genre'] = df[target_col].astype(str).apply(lambda x: x.split(',')[0].strip() if pd.notnull(x) else "Unknown")
 
 class_counts = df['Primary_Genre'].value_counts()
@@ -74,6 +78,12 @@ os.makedirs("models", exist_ok=True)
 joblib.dump(best_model, "models/text_model.joblib")
 
 y_pred_best = best_model.predict(X_test)
+
+# CORRECCIÓN 2: Generar reporte con métricas para TODAS las clases
+report_text = classification_report(y_test, y_pred_best, zero_division=0)
+with open("reports/classification_report_full.txt", "w") as f:
+    f.write(report_text)
+print("Archivo reports/classification_report_full.txt generado con éxito.")
 
 # Generar el archivo error_analysis.csv con las predicciones erróneas
 df_errors = pd.DataFrame({
